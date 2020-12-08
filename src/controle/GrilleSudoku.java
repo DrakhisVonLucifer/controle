@@ -40,5 +40,40 @@ public class GrilleSudoku {
 		this.grille = grille;
 	}
 	
+	/**
+	 * Recherche une valeur dans une ligne
+	 * @param ligne
+	 * @param valeur
+	 * @return
+	 * Return : Vrai si la valeur est présente dans la ligne
+	 * 			Faux sinon
+	 */
+	public boolean existeValeurLigne(int ligne, String valeur) {
+		boolean estPresente = false;
+		for (int colonneCourante = 0 ; colonneCourante < grille[ligne].length ; colonneCourante++) {
+			if(grille[ligne][colonneCourante].getValeur().equals(valeur)) {
+				return estPresente = true;
+			}
+		}
+		return estPresente;
+	}
+	
+	/**
+	 * Recherche une valeur dans une colonne
+	 * @param colonne
+	 * @param valeur
+	 * @return
+	 * Return : Vrai si la valeur est présente dans la colonne
+	 * 			Faux sinon
+	 */
+	public boolean existeValeurColonne(int colonne, String valeur) {
+		boolean estPresente = false;
+		for (int ligneCourante = 0 ; ligneCourante < grille.length ; ligneCourante++) {
+			if(grille[ligneCourante][colonne].getValeur().equals(valeur)) {
+				return estPresente = true;
+			}
+		}
+		return estPresente;
+	}
 	
 }

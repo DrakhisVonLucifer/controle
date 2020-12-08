@@ -16,7 +16,7 @@ public class InterfaceIHMConsole implements InterfaceIHM {
 		System.out.println("-- Test afficherJeu --");
 		afficherJeu(grilleTest.getGrille());
 		System.out.println("-- Test placerValeur  --");
-		InterfaceIHMConsole.placerValeur(0, 3, "1", grilleTest.getGrille());
+		InterfaceIHMConsole.placerValeur(0, 3, "1", grilleTest);
 		afficherJeu(grilleTest.getGrille());
 		
 	}
@@ -44,9 +44,15 @@ public class InterfaceIHMConsole implements InterfaceIHM {
 	 * @param ligne
 	 * @param colonne
 	 * @param valeur
-	 * @param grille
+	 * @param grilleSudoku
 	 */
-	public static void placerValeur(int ligne, int colonne, String valeur, Case[][] grille) {
-		grille[ligne][colonne].setValeur(valeur);
+	public static void placerValeur(int ligne, int colonne, String valeur, GrilleSudoku grilleSudoku) {
+		if(grilleSudoku.existeValeurLigne(ligne, valeur)) {
+			System.out.println("Impossible de placer la valeur car elle existe la même valeur sur la ligne.");
+		} else if (grilleSudoku.existeValeurColonne(colonne, valeur)) {
+			System.out.println("Impossible de placer la valeur car elle existe la même valeur sur la colonne.");
+		} else {
+			grilleSudoku.getGrille()[ligne][colonne].setValeur(valeur);
+		}
 	}
 }
