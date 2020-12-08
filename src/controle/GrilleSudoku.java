@@ -76,4 +76,17 @@ public class GrilleSudoku {
 		return estPresente;
 	}
 	
+	/**
+	 * Recherche une valeur dans un bloc
+	 * @param colonne
+	 * @param valeur
+	 * @return
+	 * Return : Vrai si la valeur est présente dans le bloc
+	 * 			Faux sinon
+	 */
+	public boolean existeValeurBloc(int ligneBloc, int colonneBloc, String valeur) {
+		/* return grille[ligneBloc][colonneBloc].existeValeurBloc(valeur); */
+		return false; // TODO : ajouter le concept de bloc
+	}
+	
 }
