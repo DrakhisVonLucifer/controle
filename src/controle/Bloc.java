@@ -14,8 +14,14 @@ public class Bloc {
 	
 	/** Constructeur par défaut de GrilleSudoku.java, à modifier */
 	public Bloc() {
-		// TODO : gérer le bloc uniquement puis transformer GrilleSudoku en tableau à deux dimensions de bloc
+		/* Initialisation de toutes les cases du bloc à " " */
+		for (int i = 0 ; i < bloc.length ; i++) {
+			for (int j = 0 ; j < bloc[i].length ; j++) {
+				bloc[i][j] = new Case();
+			}
+		}
 		// TODO : gérer les cas ou les blocs ne sont pas des carrés
+		// TODO : Faire fonctionner GrilleSudoku avec des blocs
 	}
 	
 	/**

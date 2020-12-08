@@ -11,6 +11,7 @@ package controle;
 public class Case {
 	public boolean estModifiable;
 	public String valeur;
+	public int numDuBloc;
 	
 	public boolean estJouable(){
 		return estModifiable;
@@ -22,6 +23,17 @@ public class Case {
 	public Case() {
 		estModifiable = true;
 		valeur = " ";
+		numDuBloc = 0;
+	}
+
+	/** @return la valeur de numDuBloc */
+	public int getNumDuBloc() {
+		return numDuBloc;
+	}
+
+	/** @param nbBloc le numDuBloc à affecter */
+	public void setNumDuBloc(int numDuBloc) {
+		this.numDuBloc = numDuBloc;
 	}
 
 	/**
@@ -29,10 +41,11 @@ public class Case {
 	 * Params : @param estModifiable
 	 * Params : @param valeur
 	 */
-	public Case(String valeur) {
+	public Case(String valeur, int nbBloc) {
 		super();
 		this.estModifiable = false;
 		this.valeur = valeur;
+		this.numDuBloc = nbBloc;
 	}
 
 	/** @return la valeur de valeur */
