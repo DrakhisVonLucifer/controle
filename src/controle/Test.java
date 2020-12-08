@@ -9,6 +9,11 @@ package controle;
  * @author Drakhis
  */
 public class Test {
-	GrilleSudoku grilleTest = new GrilleSudoku();
-	
+	public static void main(String[] args) {
+		System.out.println("-- Test --");
+		int a = 6;
+		System.out.println("avant modif : " + a);
+	    a += 4;
+	    System.out.println("après modif : " + a);
+	}
 }

@@ -21,7 +21,7 @@ public class Case {
 	 */
 	public Case() {
 		estModifiable = true;
-		valeur = "";
+		valeur = " ";
 	}
 
 	/**
@@ -42,7 +42,11 @@ public class Case {
 
 	/** @param valeur le valeur à affecter */
 	public void setValeur(String valeur) {
-		this.valeur = valeur;
+		if(this.estJouable()) {
+			this.valeur = valeur;
+		} else {
+			System.out.println("Impossible de jouer la valeur ici.");
+		}
 	}
 	
 }

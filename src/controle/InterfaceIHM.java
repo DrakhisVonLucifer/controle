@@ -11,8 +11,6 @@ package controle;
 public interface InterfaceIHM {
 
 	/** Génération du jeu */
-	public void afficherJeu();
+	// public void afficherJeu(Case[][] grille);
 	
-	/**	Méthode pour insérer une valeur dans le sudoku */
-	public void placerValeur(int ligne, int colonne, String valeur, Case[][] grille);
 }
